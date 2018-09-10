@@ -1,13 +1,13 @@
-def quickSort(arr):
-    if len(arr) < 2:
-        return arr
+def quickSort(xs):
+    if len(xs) < 2:
+        return xs
     else:
-        pivot = arr[0]
-        less = [value for value in arr[1:] if value <= pivot]
-        greater = [value for value in arr[1:] if value > pivot]
+        pivot = xs[0]
+        less = [value for value in xs[1:] if value <= pivot]
+        greater = [value for value in xs[1:] if value > pivot]
         return quickSort(less) + [pivot] + quickSort(greater)
     
-list = [1, 6, 4, 2, 5, 9]
+xs = [1, 6, 4, 2, 5, 9]
 
-print(list)
-print(quickSort(list[:]))
+print(xs)
+print(quickSort(xs[:]))

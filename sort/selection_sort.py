@@ -1,19 +1,14 @@
-def selectionSort(arr):
-    arr = arr[:]
-
-    for i in range(0, len(arr) - 1):
+def selectionSort(xs):
+    for i in range(0, len(xs) - 1):
         minIndex = i
-
-        for j in range(i + 1, len(arr)):
-            if arr[j] < arr[minIndex]:
+        for j in range(i + 1, len(xs)):
+            if xs[j] < xs[minIndex]:
                 minIndex = j
-
         if minIndex != i:
-            arr[minIndex], arr[i] = arr[i], arr[minIndex]
+            xs[minIndex], xs[i] = xs[i], xs[minIndex]
+    return xs
 
-    return arr
+xs = [3, 6, 4, 2, 9]
 
-list = [3, 6, 4, 2, 9]
-
-print(list)
-print(selectionSort(list))
+print(xs)
+print(selectionSort(xs[:]))
