@@ -33,6 +33,7 @@ def binarySearch(xs, x):
 	return l
 
 xs = [1, 4, 9, 2, 7, 5]
+
 print(xs)
 print(insertionSort(xs[:]))
 print(instertionSortWithBinarySearch(xs))
